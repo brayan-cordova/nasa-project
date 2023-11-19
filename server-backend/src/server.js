@@ -3,12 +3,18 @@ const http = require('http');
 
 const app = require('./app');
 
+const { loadPlanetsData } = require('./models/planets.model');
+
 const PORT = process.env.PORT || 4000;
 
 const server = http.createServer(app);
 
-server.listen(PORT, () => {
-    require('colors');
+async function startServer() {
+    await loadPlanetsData();
 
-    console.log(`Server running on port...${PORT.toString().bgGreen}`);
-});
+    server.listen(PORT, () => {
+        console.log(`Server running on port...${PORT.toString().bgGreen}`);
+    });
+}
+
+startServer();
