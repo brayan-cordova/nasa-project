@@ -1,0 +1,26 @@
+{
+    "name": "nasa-project",
+    "version": "1.0.0",
+    "description": "For this project NASA provides them with a FRONTEND for educational purposes only and the challenge is to build the BACKEND so that the project works well.",
+    "main": "index.js",
+    "scripts": {
+        "install-backend": "npm install --prefix backend",
+        "install-frontend": "npm install --prefix frontend",
+        "install": "npm run install-backend && npm run install-frontend",
+        "backend": "npm run start --prefix backend",
+        "frontend": "npm run start --prefix frontend",
+        "start": "npm run backend & npm run frontend",
+        "test": "npm run test --prefix backend && frontend"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/brayan-cordova/nasa-project.git"
+    },
+    "keywords": [],
+    "author": "Brayan Cordova",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/brayan-cordova/nasa-project/issues"
+    },
+    "homepage": "https://github.com/brayan-cordova/nasa-project#readme"
+}
